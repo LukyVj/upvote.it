@@ -1,0 +1,194 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://fonts.googleapis.com/css?family=Fauna+One|Karla:400,400italic,700,700italic|Telex);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+*{box-sizing: border-box;-webkit-font-smoothing:antialiased; }
+html {
+    font-family: sans-serif; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+    margin: 0;
+}
+
+/**
+ * Default selection is white on black.
+ * Background for webkit: #b3d4fc
+ */
+
+::-moz-selection    { background: #000; color: #fff; text-shadow: none; }
+::selection         { background: #000; color: #fff; text-shadow: none; }
+
+/**
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: .83em 0;
+}
+h1,h2,h3,p,a{
+	font-family: 'Telex', sans-serif;
+
+}
+.content__body h1,h2,h3{color: #0068b4}
+
+
+
+.embrace {
+    color: #fff;
+}
+.colorize .embrace {
+    color: #f7242b;
+}
+
+body {
+    font-family: 'Helvetica Neue';
+    line-height: 1.5;
+}
+
+
+[class*="-up-"]{color:#bbdaad}
+[class*="-down-"]{color:#dd473d}
+[class*="-down-"]:hover,[class*="-up-"]:hover{color:#0068b4}
+/**
+ * Default links
+ */
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #0068b4;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    line-height: 1.33;
+}
+
+/**
+ * Headers
+ */
+
+.header{    
+	position: relative;
+    background: #0068b4;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 100;
+}
+
+.header__wrapper {
+    padding-right: 88px;
+}
+
+.header__title {
+    margin-top: 1em;
+}
+.content__title{
+	font-size: 3em
+}
+
+.header__title--tight {
+    margin-top: 1em;
+}
+
+.header__link {
+    -webkit-transition: all .1s ease-out;
+       -moz-transition: all .1s ease-out;
+            transition: all .1s ease-out;
+}
+.header__link:hover {
+    color: #fff;
+}
+
+
+/**
+ * Footers
+ */
+
+.footer {
+    color: #000;
+    font-size: .88em;
+}
+
+
+/**
+ * Main contents
+ */
+
+.content {
+    margin: 0 auto;
+    max-width: 764px;
+    position: relative;
+}
+
+
+
+
+.content__box--padded{
+    padding: 0 5% 12.5%;
+}
+.content__body {
+    font-size: 1.25em;
+}
+
+.content__body h3 {
+    margin: 2em 0 0;
+}
+
+.content__body p a {
+    padding-top: 5px;
+    padding-bottom: 3px;
+
+    -webkit-transition: all .15s linear;
+       -moz-transition: all .15s linear;
+            transition: all .15s linear;
+}
+.content__body p a:hover {
+    background: #0068b4;
+    color: #fff;
+}
+
+ul li{display:block;padding:.5em;}
+ul li:nth-child(even){background:#eee;}
+
+
+ul li span{float:right;margin:0 4px;}
+
+
