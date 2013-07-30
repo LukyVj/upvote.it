@@ -21,8 +21,10 @@
  <header class="header">
         <div class="content">
                                 
-               <h1 class="content__title">UpVote.it</h1>
-                
+              <!-- <h1 class="content__title"><a href="http://dev.web-gate.fr/upvote.it/index.php">UpVote.it</a></h1> -->
+                         <h1 class="content__title"><a href="/">Lastwish.es</a></h1>
+                         <h2>The place where you lost faith in humanity</h2>
+
             </div>
         </div>
     </header> <!-- .header -->
@@ -33,13 +35,15 @@
     <section class="content__box--padded content__body">
 
     
-				 <h2>News Sucks ?</h2>
-				  <h3>Why don't you create yours.</h3>
+			<!--	 <h2>News Sucks ?</h2>
+				  <h3>Why don't you create yours.</h3> -->
 				  
 				  <p>
 				  <form action="index.php" method="POST" accept-charset="utf-8">
 				  	 	<label for="link">Submit link</label>
-				  	 	<input id="link" type="url" name="link" value="" placeholder="http://">  
+				  	 	<input id="title" type="text" name="title" value="" placeholder="title" required>  
+				  	 	<input id="desc" type="text" name="desc" value="" placeholder="a short description...">  
+				  	 	<input id="link" type="url" name="link" value="" placeholder="http://" required>  
 				  	 	<input id="submit" type="submit" name="submit" value="submit">  
 				  </form>
 				  </p>
@@ -56,7 +60,7 @@
 					
 					//remove below    
 				
-					echo '<li><a href="'.$data['link'].'">'.$data['link'].'</a> <a href="upvote.php?id='.$data['id'].'"> | '.$data['note'].' | <span class="entypo-up-open-big"></span></a>  <a href="downvote.php?id='.$data['id'].'"><span class="entypo-down-open-big"></span></a> </li>'; 
+					echo '<li><a href="'.$data['link'].'">'.$data['title'].'</a><span class="small">('.$data['link'].')</span> <span><a href="upvote.php?id='.$data['id'].'" class="note"> | '.$data['note'].' | <span class="entypo-up-open-big"></span></a>  <a href="downvote.php?id='.$data['id'].'"><span class="entypo-down-open-big"></span></a></span>  <p>'.$data['description'].'</p></li>'; 
 					}
 				?>
 				
@@ -81,9 +85,14 @@ if (isset($_POST['submit']) && $_POST['link'] != "") {
 		
 	if(isset($_POST['link']))      $link= $_POST['link'];
 	else      $link="";
+	if(isset($_POST['title']))     $title= $_POST['title'];
+	else      $title="";
+	if(isset($_POST['desc']))      $desc= $_POST['desc'];
+	else      $desc="";
 	
 	
-    $sql = " INSERT IGNORE INTO `upvote` (`id`, `link`, `note`) VALUES (NULL,'$link','0')"; 
+	
+    $sql = " INSERT IGNORE INTO `upvote` (`id`, `title`, `description`, `link`, `note`) VALUES (NULL,'$title','$desc','$link','0')"; 
      
     mysql_query($sql) or  die(mysql_error()); 
 
